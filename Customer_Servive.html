@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Customer Service Bot</title>
+</head>
+<body>
+<h1>Customer Service Bot ~ Smalleeyes 0m364</h1>
+<form id="customerServiceForm">
+    <p>Please enter your name:</p>
+    <input type="text" name="name" required>
+    
+    <p>Please enter your email address:</p>
+    <input type="email" name="email" required>
+    
+    <p>Please enter your phone number:</p>
+    <input type="text" name="phone" required>
+    
+    <p>Please enter your address:</p>
+    <input type="text" name="address" required>
+    
+    <p>What can I help you with today?</p>
+    <select name="request">
+        <option value="complaint">Complaint</option>
+        <option value="praise">Praise</option>
+        <option value="service">Service</option>
+    </select>
+    
+    <p>Please provide details about your request:</p>
+    <textarea name="details" required></textarea>
+    
+    <br>
+    <button type="submit">Submit</button>
+</form>
+
+<p id="feedbackMessage" style="display: none;">Thank you for your feedback. Your request has been filed.</p>
+
+<script>
+    document.getElementById('customerServiceForm').addEventListener('submit', function(e) {
+        e.preventDefault();  // Prevents form from submitting the traditional way
+        document.getElementById('feedbackMessage').style.display = 'block';
+        // TODO: Add logic to handle form data, e.g., sending to server
+    });
+</script>
+
+</body>
+</html>
